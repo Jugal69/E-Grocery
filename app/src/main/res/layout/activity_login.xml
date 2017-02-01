@@ -38,16 +38,18 @@ android:scrollbarAlwaysDrawVerticalTrack="true">
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingTop="30dp">
+        android:paddingTop="30dp"
+        android:weightSum="1">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/editTextUserNameToLogin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:drawableTint="#FF4081"
+                android:drawableTint="#761e3c"
                 android:singleLine="true"
                 android:hint="User Name"
                 android:inputType="textEmailAddress" />
@@ -58,6 +60,7 @@ android:scrollbarAlwaysDrawVerticalTrack="true">
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/editTextPasswordToLogin"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -77,14 +80,32 @@ android:scrollbarAlwaysDrawVerticalTrack="true">
 
 
         <Button
-            android:layout_width="fill_parent"
+            android:id="@+id/LogIn"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:background="#d67601"
+            android:text="Log in"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:onClick="onButtonClick"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.13" />
+
+        <Button
+            android:id="@+id/SignIn"
+            android:layout_width="108dp"
             android:layout_height="wrap_content"
             android:layout_margin="22dp"
             android:background="#d67601"
             android:text="Sign in"
             android:textAllCaps="false"
             android:textColor="#fff"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:onClick="onButtonClick"
+            android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 </RelativeLayout>
 
